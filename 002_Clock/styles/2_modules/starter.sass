@@ -1,0 +1,112 @@
+
+// Color Variables
+$s1: #333
+$s2: #eee
+
+// Mixins
+=center-content($x, $y)
+  position: absolute
+  bottom: 50%
+  left: 50%
+  transform: translate($x, $y)
+
+// Global
+*
+  box-sizing: border-box
+
+h1, h2, h3, h4
+  margin: 0
+  font-family: "Montserrat", sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility
+  
+  
+  
+// Main styles begin
+body
+  background-color: #ccc
+  background-blend-mode: multiply
+  margin: 0
+  position: absolute
+  height: 100vh
+  width: 100vw
+  
+
+.clock
+  background-color: $s1
+  border-radius: 50%
+  box-shadow: 10px 10px 50px transparentize($s1, 0.7)
+  width: 480px
+  height: 480px
+  position: relative
+  margin: 120px auto
+
+.clock-face
+  background-color: $s2
+  border-radius: 50%
+  box-shadow: inset 10px 10px 50px transparentize($s1, 0.5)
+  width: 460px
+  height: 460px
+  // See mixin at top of starter.sass
+  +center-content(-50%, 50%)
+
+  .hand
+    background-color: $s1
+    border-radius: 0px
+    width: 10px
+    +center-content(0, 0)
+    margin-left: -5px
+    transform-origin: bottom
+    transition: 0.05s
+    transition-timing-function: cubic-bezier(0, 3, 0.5, 1)
+
+  .hour-hand
+    height: 120px
+    z-index: 2
+
+  .minute-hand
+    height: 160px
+    z-index: 2
+
+  .second-hand
+    background-color: hsla(6, 82%, 55%, 1)
+    height: 180px
+    width: 4px
+    margin-left: -2px
+
+  .center-pin
+    background-color: $s1
+    border-radius: 50%
+    width: 10px
+    height: 10px
+    +center-content(-50%, 50%)
+
+  .tic
+    background-color: $s1
+    box-sizing: content-box
+    background-clip: content-box
+    height: 30px
+    width: 4px
+    +center-content(0, 0)
+    margin-left: -2px
+    padding-bottom: 190px
+    transform-origin: bottom
+
+  .tic1
+    transform: rotate(30deg)
+
+.welcome-wrapper
+  text-align: center
+  margin: 0 auto 80px
+
+  h1
+    color: $s1
+    font-weight: 300
+    margin-bottom: 14px
+
+  h4
+    color: $s1
+    font-weight: 400
+    margin-bottom: 4px
+    

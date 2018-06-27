@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CSS Variables</title>
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div class="controls">
+        <h2>Controls</h2>
+
+        <label for="paddingWidth">Padding Width</label>
+        <input type="range" name="paddingWidth" min="0" max="400" value="30" data-sizing="px">
+
+        <label for="paddingHeight">Padding Height</label>
+        <input type="range" name="paddingHeight" min="0" max="400" value="16" data-sizing="px">
+
+        <label for="blur">Blur</label>
+        <input type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
+
+        <label for="corners">Corners</label>
+        <input type="range" name="corners" min="0" max="800" value="5" data-sizing="px">
+
+        <label for="base">Base Color</label>
+        <input type="color" name="base" value="#1F7DFF">
+
+        <label for="textColor">Text Color</label>
+        <input type="color" name="textColor" value="#ffffff">
+      </div>
+
+
+      <div class="containerRight">
+        <h2>Update CSS variables with <span class="highlight">JavaScript</span></h2>
+        <div class="box">
+          <h4 class="box-text" contenteditable="true">This text is editable</h4>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
