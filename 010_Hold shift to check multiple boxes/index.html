@@ -9,135 +9,99 @@
 <head>
   <meta charset="UTF-8">
   <title>Hold Shift to Check Multiple Checkboxes</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 
 
-
-<style>
-  html {
-    font-family: sans-serif;
-    background:#ffc600;
-  }
-
-  .inbox {
-    max-width:400px;
-    margin:50px auto;
-    background:white;
-    border-radius:5px;
-    box-shadow:10px 10px 0 rgba(0,0,0,0.1);
-    user-select: none;
-  }
-
-  .item {
-    display:flex;
-    align-items:center;
-    border-bottom: 1px solid #F1F1F1;
-  }
-
-  .item:last-child {
-    border-bottom:0;
-  }
-
-  /* input {
-    visibility: hidden;
-  } */
-
-  input:checked + p {
-    background:#f3f3f3;
-    text-decoration: line-through;
-  }
-
-  input[type="checkbox"] {
-    margin:20px;
-  }
-
-  p {
-    margin:0;
-    padding:20px;
-    transition:background 0.2s;
-    flex:1;
-    font-family:'helvetica neue';
-    font-size: 20px;
-    font-weight: 200;
-    border-left: 1px solid #D1E2FF;
-  }
-</style>
-
-
-
-
-<div class="inbox">
+<div class="checklist">
   <label class="item">
     <input type="checkbox">
+    <div class="animatedCheckbox">
+      <svg width="12px" height="10px" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
     <p>This is an inbox layout.</p>
   </label>
   <label class="item">
     <input type="checkbox">
+    <div class="animatedCheckbox">
+      <svg width="12px" height="10px" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
     <p>Check one item</p>
   </label>
   <label class="item">
     <input type="checkbox">
+    <div class="animatedCheckbox">
+      <svg width="12px" height="10px" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
     <p>Hold down your Shift key</p>
   </label>
   <label class="item">
     <input type="checkbox">
+    <div class="animatedCheckbox">
+      <svg width="12px" height="10px" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
     <p>Check a lower item</p>
   </label>
   <label class="item">
     <input type="checkbox">
+    <div class="animatedCheckbox">
+      <svg width="12px" height="10px" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
     <p>Everything inbetween should also be set to checked</p>
   </label>
   <label class="item">
     <input type="checkbox">
+    <div class="animatedCheckbox">
+      <svg width="12px" height="10px" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
     <p>Try do it with out any libraries</p>
   </label>
   <label class="item">
     <input type="checkbox">
+    <div class="animatedCheckbox">
+      <svg width="12px" height="10px" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
     <p>Just regular JavaScript</p>
   </label>
   <label class="item">
     <input type="checkbox">
+    <div class="animatedCheckbox">
+      <svg width="12px" height="10px" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
     <p>Good Luck!</p>
   </label>
   <label class="item">
     <input type="checkbox">
+    <div class="animatedCheckbox">
+      <svg width="12px" height="10px" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
     <p>Don't forget to tweet your result!</p>
   </label>
 </div>
 
 
 
-
-<script>
-
-  const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
-  
-  let mostRecentlyChecked;
-
-  function handleCheck(e) {
-    let inBetween = false;
-    if (e.shiftKey && this.checked) {
-      checkboxes.forEach(checkbox => {
-        console.log(checkbox);
-        if (checkbox === this || checkbox === mostRecentlyChecked) {
-          inBetween = !inBetween;
-          console.log('first / last');
-        }
-        if (inBetween) {
-          checkbox.checked = true;
-        }
-      });
-    }
-    // value of mostRecentlyChecked doesn't change until the interpreter gets to this line.
-    mostRecentlyChecked = this;
-  }
-
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('click', handleCheck);
-  })
-
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
