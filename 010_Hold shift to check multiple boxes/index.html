@@ -40,6 +40,10 @@
     border-bottom:0;
   }
 
+  /* input {
+    visibility: hidden;
+  } */
+
   input:checked + p {
     background:#f3f3f3;
     text-decoration: line-through;
@@ -116,8 +120,10 @@
     let inBetween = false;
     if (e.shiftKey && this.checked) {
       checkboxes.forEach(checkbox => {
+        console.log(checkbox);
         if (checkbox === this || checkbox === mostRecentlyChecked) {
           inBetween = !inBetween;
+          console.log('first / last');
         }
         if (inBetween) {
           checkbox.checked = true;
