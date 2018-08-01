@@ -19,10 +19,23 @@ function debounce(func, wait = 20, immediate = true) {
 const sliderImages = document.querySelectorAll('.slide-in');
 
 function checkSlide(e) {
-  // console.count(e);
-  console.log(window.scrollY + window.innerHeight)
   sliderImages.forEach(img => {
-    const slideInAt = (window.scrollY + window.innerHeight);
+    // Position of the bottom of the screen/
+    let screenBottom = window.scrollY + window.innerHeight;
+    // Bottom of screen meets the halfway point on the image's Y axis.
+    const slideInAt = screenBottom - img.height / 2;
+    // Position of the bottom of the image.
+    const imgBottom = img.offsetTop + img.height;
+    // Is half of the image shown?
+    const isHalfShown = slideInAt > img.offsetTop;
+    // Has the user scrolled past the image?
+    const isNotScrolledPast = window.scrollY < imgBottom;
+    
+    if (isHalfShown && isNotScrolledPast) {
+      img.classList.add('active');
+    } else {
+      img.classList.remove('active');
+    }
   })
 }
 
