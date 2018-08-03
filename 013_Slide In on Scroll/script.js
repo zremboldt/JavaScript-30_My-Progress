@@ -1,15 +1,15 @@
 
 
-
 function debounce(func, wait = 20, immediate = true) {
-  var timeout;
+  let timeout;
   return function () {
-    var context = this, args = arguments;
-    var later = function () {
+    const context = this;
+    const args = arguments;
+    const later = function () {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
-    var callNow = immediate && !timeout;
+    const callNow = immediate && !timeout;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
@@ -18,10 +18,10 @@ function debounce(func, wait = 20, immediate = true) {
 
 const sliderImages = document.querySelectorAll('.slide-in');
 
-function checkSlide(e) {
-  sliderImages.forEach(img => {
+function checkSlide() {
+  sliderImages.forEach((img) => {
     // Position of the bottom of the screen/
-    let screenBottom = window.scrollY + window.innerHeight;
+    const screenBottom = window.scrollY + window.innerHeight;
     // Bottom of screen meets the halfway point on the image's Y axis.
     const slideInAt = screenBottom - img.height / 2;
     // Position of the bottom of the image.
@@ -30,13 +30,13 @@ function checkSlide(e) {
     const isHalfShown = slideInAt > img.offsetTop;
     // Has the user scrolled past the image?
     const isNotScrolledPast = window.scrollY < imgBottom;
-    
+
     if (isHalfShown && isNotScrolledPast) {
       img.classList.add('active');
     } else {
       img.classList.remove('active');
     }
-  })
+  });
 }
 
 window.addEventListener('scroll', debounce(checkSlide));
