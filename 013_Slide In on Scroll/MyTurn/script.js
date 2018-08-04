@@ -5,11 +5,11 @@ const sections = document.querySelectorAll('.triggerOnScroll');
 
 function checkSlide() {
   sections.forEach((section) => {
-    // Position of the bottom of the screen/
+    // Position of the bottom of the screen
     const screenBottom = scrollPosY + window.innerHeight;
-    // Bottom of screen meets the halfway point on the image's Y axis.
+    // Bottom of screen meets the 200px point on the section's Y axis.
     const slideInAt = screenBottom - 200;
-    // Is half of the image shown?
+    // Is part of the section shown?
     const isHalfShown = slideInAt > section.offsetTop;
 
     if (isHalfShown) {
