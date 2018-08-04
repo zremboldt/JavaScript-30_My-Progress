@@ -1,25 +1,19 @@
 
 let scrollPosY = 0; // Holds current scroll position
 let ticking = false;
-const sliderImages = document.querySelectorAll('.slide-in');
+const sections = document.querySelectorAll('.triggerOnScroll');
 
 function checkSlide() {
-  sliderImages.forEach((img) => {
+  sections.forEach((section) => {
     // Position of the bottom of the screen/
     const screenBottom = scrollPosY + window.innerHeight;
     // Bottom of screen meets the halfway point on the image's Y axis.
-    const slideInAt = screenBottom - img.height / 2;
-    // Position of the bottom of the image.
-    const imgBottom = img.offsetTop + img.height;
+    const slideInAt = screenBottom - 200;
     // Is half of the image shown?
-    const isHalfShown = slideInAt > img.offsetTop;
-    // Has the user scrolled past the image?
-    const isNotScrolledPast = scrollPosY < imgBottom;
+    const isHalfShown = slideInAt > section.offsetTop;
 
-    if (isHalfShown && isNotScrolledPast) {
-      img.classList.add('active');
-    // } else {
-    //   img.classList.remove('active');
+    if (isHalfShown) {
+      section.classList.add('active');
     }
   });
 }

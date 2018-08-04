@@ -6,10 +6,7 @@ html, body {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #333;
-  background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #BADA55;
   font-family: 'helvetica neue', sans-serif;
   font-size: 20px;
   font-weight: 200;
