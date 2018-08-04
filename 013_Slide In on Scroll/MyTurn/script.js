@@ -7,8 +7,8 @@ function checkSlide() {
   sections.forEach((section) => {
     // Position of the bottom of the screen
     const screenBottom = scrollPosY + window.innerHeight;
-    // Bottom of screen meets the 200px point on the section's Y axis.
-    const slideInAt = screenBottom - 200;
+    // Bottom of screen meets the 260px point on the section's Y axis.
+    const slideInAt = screenBottom - 260;
     // Is part of the section shown?
     const isHalfShown = slideInAt > section.offsetTop;
 

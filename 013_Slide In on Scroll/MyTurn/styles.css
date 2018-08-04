@@ -4,14 +4,12 @@ html, body {
 html {
   min-height: 100%;
   box-sizing: border-box;
-  background-color: #204754;
-  font-size: 10px;
-  position: relative; }
+  font-size: 10px; }
 
 body {
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(180deg, #4C83FF 0%, #2AFADF 40%, #F9FEA5 100%);
+  background-image: linear-gradient(180deg, #5961F9 0%, #2AFADF 40%, #F9FEA5 100%);
   background-repeat: no-repeat; }
 
 *, *:before, *:after {

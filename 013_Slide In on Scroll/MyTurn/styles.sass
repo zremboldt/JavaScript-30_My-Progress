@@ -1,12 +1,18 @@
 
-$g1: #4C83FF  
+// -------------------------------------------------------------
+// Variables
+
+// Colors
+$g1: #5961F9  
 $g2: #2AFADF
 $g3: #F9FEA5
 $text: #204754
 
-$zease:       cubic-bezier(0.165, 0.84, 0.44, 1)
+// Easing
+$zease: cubic-bezier(0.165, 0.84, 0.44, 1)
 
 // -------------------------------------------------------------
+// Globals
 
 html, body
   margin: 0
@@ -14,9 +20,7 @@ html, body
 html
   min-height: 100%
   box-sizing: border-box
-  background-color: $text
-  font-size: 10px  
-  position: relative
+  font-size: 10px
   
 body
   height: 100%
@@ -24,11 +28,11 @@ body
   background-image: linear-gradient(180deg, $g1 0%, $g2 40%, $g3 100%)
   background-repeat: no-repeat
   
-
 *, *:before, *:after
   box-sizing: inherit
 
 // -------------------------------------------------------------
+// Typography
 
 h1, p
   color: $text
@@ -48,6 +52,7 @@ p
     margin-bottom: -6px
 
 // -------------------------------------------------------------
+// Main
 
 .site-wrap
   max-width: 700px
@@ -75,6 +80,7 @@ section
   transform: translateY(0) scale(1)
 
 // -------------------------------------------------------------
+// Media Queries
 
 @media (max-width: 600px)
 
