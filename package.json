@@ -1,0 +1,24 @@
+{
+  "name": "javascript-30_my-progress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zacaree/JavaScript-30_My-Progress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zacaree/JavaScript-30_My-Progress/issues"
+  },
+  "homepage": "https://github.com/zacaree/JavaScript-30_My-Progress#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}

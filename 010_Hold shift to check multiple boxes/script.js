@@ -5,7 +5,7 @@ let mostRecentlyChecked;
 function handleCheck(e) {
   let inBetween = false;
   if (e.shiftKey && this.checked) {
-    checkboxes.forEach(checkbox => {
+    checkboxes.forEach((checkbox) => {
       console.log(checkbox);
       if (checkbox === this || checkbox === mostRecentlyChecked) {
         inBetween = !inBetween;
@@ -20,6 +20,7 @@ function handleCheck(e) {
   mostRecentlyChecked = this;
 }
 
-checkboxes.forEach(checkbox => {
+checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', handleCheck);
 })
+;
