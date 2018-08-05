@@ -15,6 +15,11 @@ function checkSlide() {
     if (isHalfShown) {
       section.classList.add('active');
     }
+
+    // Resets everything when at the top of page
+    if (scrollPosY < 200) {
+      section.classList.remove('active');
+    }
   });
 }
 
