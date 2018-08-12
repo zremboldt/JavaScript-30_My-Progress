@@ -10,6 +10,7 @@ $text: #204754
 
 // Easing
 $zease: cubic-bezier(0.165, 0.84, 0.44, 1)
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275)
 
 // -------------------------------------------------------------
 // Globals
@@ -78,6 +79,25 @@ section
 .active
   opacity: 1
   transform: translateY(0) scale(1)
+
+// -------------------------------------------------------------
+// Headline Animation
+.splitting
+  .char
+    color: transparent
+    
+    &:after
+      visibility: visible
+      color: $text
+      opacity: 0
+      transform: translateY(30%)
+      transition: all .6s $easeOutBack
+      transition-delay: calc(.2s + (.04s * var(--char-index) ) )
+
+.active 
+  .char:after
+    opacity: 1
+    transform: translateY(0)
 
 // -------------------------------------------------------------
 // Media Queries

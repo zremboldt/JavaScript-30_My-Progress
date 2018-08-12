@@ -1,4 +1,12 @@
 
+Splitting();
+
+setTimeout(() => {
+  document.querySelector('.first').classList.add('active');
+}, 300);
+
+// -----------------------------
+
 let scrollPosY = 0; // Holds current scroll position
 let ticking = false;
 const sections = document.querySelectorAll('.triggerOnScroll');

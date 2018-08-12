@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Slide In on Scroll</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,8 +16,8 @@
 
 <div class="site-wrap">
 
-  <section>
-    <h1>Scroll on down</h1>
+  <section class="first">
+    <h1 data-splitting>Scroll on down</h1>
     <p>Consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem dolor
       at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in aspernatur
       pariaturlores sunt esse magni, ut, dignissimos.</p>
@@ -34,7 +35,7 @@
   </section>
 
   <section class="triggerOnScroll">
-    <h1>Articles fading in</h1>
+    <h1 data-splitting>Articles fading in</h1>
     <p>Consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem dolor
       at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in aspernatur
       pariaturlores sunt esse magni, ut, dignissimos.</p>
@@ -48,7 +49,7 @@
   </section>
 
   <section class="triggerOnScroll">
-    <h1>🐠 Just keep scrolling</h1>
+    <h1 data-splitting>Just keep scrolling</h1>
     <p>Consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem dolor
       at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in aspernatur
       pariaturlores sunt esse magni, ut, dignissimos.</p>
@@ -59,7 +60,7 @@
   </section>
 
   <section class="triggerOnScroll">
-    <h1>Colors changing</h1>
+    <h1 data-splitting>Colors changing</h1>
     <p>Consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem
       dolor at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora
       in aspernatur pariaturlores sunt esse magni, ut, dignissimos.</p>
@@ -77,7 +78,7 @@
   </section>
 
   <section class="triggerOnScroll">
-    <h1>The end</h1>
+    <h1 data-splitting>The end</h1>
     <p>Consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem
       dolor at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora
       in aspernatur pariaturlores sunt esse magni, ut, dignissimos.</p>
@@ -90,7 +91,7 @@
 </div>
 
 
-
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
