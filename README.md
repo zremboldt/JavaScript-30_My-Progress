@@ -9,7 +9,7 @@ Built this out with some awesome custom checkboxes and the ability to click anyw
 ![](010.gif)  
 
 ## 013 Slide in on Scroll
-I put a lot of extra work into this one! Love what I learned about using JS to trigger functions based on scroll position. I combined this with a JS library called "Splitting" by @shshaw which allows the animation of individual characters of text.  
+Learned a lot about detecting and using scroll position to trigger events. Below is my own take on the challenge.
 
 ![](013.gif)  
 
