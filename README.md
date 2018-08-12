@@ -35,7 +35,7 @@ Built this out with some awesome custom checkboxes and the ability to click anyw
 
 ## 013 Slide in on Scroll
 I put a lot of extra work into this one! Love what I learned about using JS to trigger functions based on scroll position. I combined this with a JS library called "Splitting" by @shshaw which allows the animation of individual characters of text.  
-![](013_my-slide-in-on-scroll.gif)  
+![](013_my-slide-in-on-scroll-1.gif)  
 
 ### 014 Reference vs Copy
 A JS fundamentals exercise
