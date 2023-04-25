@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/zacaree/JavaScript-30_My-Progress#readme",
   "devDependencies": {
-    "eslint": "^4.19.1",
+    "eslint": "^8.39.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0"
   }
